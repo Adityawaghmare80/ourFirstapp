@@ -37,6 +37,15 @@
                 (click)="selectedCity = 'berlin'"
                  class="nav-link">Berlin</a>
             </li>
+            <li class="nav-item">
+                <a href="javascript:;"
+                [ngClass]="{
+                    active : selectedCity === 'dubai'
+                }"
+                data-cities = 'dubai'
+                (click)="selectedCity = 'dubai'"
+                 class="nav-link">Dubai</a>
+            </li>
         </ul>
         <div class="card" *ngIf="selectedCity === 'paris'">
             <div class="card-body">
@@ -81,6 +90,17 @@
                 <div class="cl-md-12">
                     <strong>Berlin :- </strong>
                     Berlin, Germany’s capital, dates to the 13th century. Reminders of the city's turbulent 20th-century history include its Holocaust memorial and the Berlin Wall's graffitied remains. Divided during the Cold War, its 18th-century Brandenburg Gate has become a symbol of reunification. The city's also known for its art scene and modern landmarks like the gold-colored, swoop-roofed Berliner Philharmonie, built in 1963.
+                </div>
+            </div>
+        </div>
+        <div class="card" *ngIf="selectedCity === 'dubai'">
+            <div class="card-body">
+                <div class="col-md-12">
+                    <img src="https://wallpapercave.com/wp/wp13483521.jpg" alt="">
+                </div>
+                <div class="cl-md-12">
+                    <strong>Dubai :- </strong>
+                    Dubai is a city and emirate in the United Arab Emirates known for luxury shopping, ultramodern architecture and a lively nightlife scene. Burj Khalifa, an 830m-tall tower, dominates the skyscraper-filled skyline. At its foot lies Dubai Fountain, with jets and lights choreographed to music. On artificial islands just offshore is Atlantis, The Palm, a resort with water and marine-animal parks.
                 </div>
             </div>
         </div>
