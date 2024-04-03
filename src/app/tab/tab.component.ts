@@ -17,4 +17,5 @@ export class TabComponent implements OnInit {
     this.selectedCity = (eve.target as HTMLAnchorElement).dataset['data-cities'] as string
   }
 
+  
 }
