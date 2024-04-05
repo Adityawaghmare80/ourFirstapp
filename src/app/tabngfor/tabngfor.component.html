@@ -1,0 +1,31 @@
+<div class="row mb-3 mt-3">
+    <div class="col-md-10 offset-1">
+        <ul class="nav nav-pills d-flex justify-content-around">
+            <li class="nav-item" *ngFor="let city of citiesArr">
+                <a href="javascript:;" 
+                [ngClass]="{
+                    active : city.citititle.includes(selectedCity)
+                }" 
+                class="nav-link" 
+                (click)="selectedCity = city.citititle"
+                >{{city.citititle}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10 offset-1">
+        <ng-container *ngFor="let city of citiesArr">
+            <div class="card" *ngIf="city.citititle.includes(selectedCity)">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <img [src]="city.cityimg" alt="">
+                        </div>
+                        <div class="col-12" [innerHTML]="city.citycontent"></div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div> 
